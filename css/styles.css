@@ -1,0 +1,162 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: rgb(250, 248, 246);
+}
+
+#gestionarAlumnes {
+    grid-area: gest-alumnes;
+}
+
+#importarAlumnes {
+    grid-area: import-alumnes;
+}
+
+#gestionarActes {
+    grid-area: gest-actes;
+}
+
+#consultarInvitacions {
+    grid-area: cons-invitacions;
+}
+
+#consultarAssistents {
+    grid-area: cons-asists;
+}
+
+#gestionarPuntsControl {
+    grid-area: gest-pdc;
+}
+
+#consultarRegistresAcces {
+    grid-area: cons-regAc;
+}
+
+#consultarEstadistiques {
+    grid-area: cons-stats;
+}
+
+#consultarRanquing {
+    grid-area: cons-ranquing;
+}
+
+#configuracio {
+    grid-area: config;
+}
+
+#titol {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 20px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+
+}
+
+#titol-cercador {}
+
+#cerca {}
+
+#subtitol-titol {
+    color: green;
+}
+
+#titolpetit {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    margin: 0 0 4px;
+}
+
+#text-petit-titol {
+    font-size: 15px;
+    margin: 0;
+}
+
+#text-petit {
+    margin: auto 0 0;
+    padding-top: 16px;
+    text-align: center;
+}
+
+#llista-alumnes {}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .botons {
+        grid-template-columns: 2, 1fr;
+        grid-template-areas:
+            "gest-alumnes import-alumnes"
+            "gest-actes cons-invitacions"
+            "cons-asists gest-pdc"
+            "cons-regAc cons-stats"
+            "cons-ranquing config";
+    }
+}
+
+@media (max-width: 600px) {
+    .botons {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "gest-alumnes"
+            "import-alumnes"
+            "gest-actes"
+            "cons-invitacions"
+            "cons-asists"
+            "gest-pdc"
+            "cons-regAc"
+            "cons-stats"
+            "cons-ranquing"
+            "config";
+    }
+}
+
+/* PC */
+@media (min-width: 1025px) {
+    .botons {
+        grid-template-columns: 4, 1fr;
+        grid-template-areas:
+            "gest-alumnes import-alumnes gest-actes cons-invitacions"
+            "cons-asists gest-pdc cons-regAc cons-stats"
+            ". cons-ranquing config .";
+    }
+
+    #gestionarAlumnes {
+        grid-area: gest-alumnes;
+    }
+
+    #importarAlumnes {
+        grid-area: import-alumnes;
+    }
+}
+
+
+#llista-alumnes {}
+
+#sense-resultats {}
+
+.botons {
+    display: grid;
+    gap: 10px;
+    padding: 15px 40px;
+    text-align: center;
+}
+
+.botons>div {
+    min-width: 0;
+}
+
+.botons button {
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    padding: 2%;
+    font: inherit;
+    cursor: pointer;
+    border-radius: 25px;
+}

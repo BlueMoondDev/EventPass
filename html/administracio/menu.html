@@ -4,44 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina d'Administració</title>
+    <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
     <h1 id="titol">EVENT PASS</h1>
-    <p>Espai d'administració</p>
-    <h2>Gestió</h2>
-    <p>Totes les eines per organitzar els teus actes.</p>
+    <p id="subtitol-titol">Espai d'administració</p>
+    <h2 id="titolpetit">Gestió</h2>
+    <p id="text-petit-titol">Totes les eines per organitzar els teus actes.</p>
+
+    <!-- INICI: contingut afegit per a la prova del cercador i la llista d'alumnes -->
+    <section aria-labelledby="titol-cercador">
+        <p id="titol-cercador">Alumnes</p>
+        <label for="cerca">Cercar alumnes per nom, identificador o punts</label>
+        <input id="cerca" type="search" placeholder="Per exemple: Laia, 12345678Z o 80 punts">
+        <ul id="llista-alumnes" aria-label="Llista d'alumnes de mostra">
+            <li>
+                <span>LV</span>
+                <strong>Laia Vidal</strong>
+                <span>12345678Z</span>
+                <span>80 punts</span>
+            </li>
+            <li>
+                <span>MS</span>
+                <strong>Marc Soler</strong>
+                <span>23456789D</span>
+                <span>60 punts</span>
+            </li>
+            <li>
+                <span>JC</span>
+                <strong>Júlia Costa</strong>
+                <span>34567890V</span>
+                <span>40 punts</span>
+            </li>
+            <li>
+                <span>NR</span>
+                <strong>Nil Ojeda</strong>
+                <span>45678901G</span>
+                <span>20 punts</span>
+            </li>
+            <li>
+                <span>JA</span>
+                <strong>Jaime Altozano</strong>
+                <span>23967443T</span>
+                <span>100 punts</span>
+            </li>
+        </ul>
+        <p id="sense-resultats" aria-live="polite" hidden>No s'han trobat alumnes.</p>
+    </section>
+    <script>
+        const cercador = document.getElementById("cerca");
+        const alumnes = document.querySelectorAll("#llista-alumnes li");
+        const missatgeBuit = document.getElementById("sense-resultats");
+        const normalitza = (text) => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase();
+
+        cercador.addEventListener("input", () => {
+            const textCercat = normalitza(cercador.value.trim());
+            let resultatsVisibles = 0;
+
+            alumnes.forEach((alumne) => {
+                const coincideix = normalitza(alumne.textContent).includes(textCercat);
+                alumne.hidden = !coincideix;
+
+                if (coincideix) {
+                    resultatsVisibles += 1;
+                }
+            });
+
+            missatgeBuit.hidden = resultatsVisibles > 0;
+        });
+    </script>
+    <!-- FI: contingut afegit per a la prova del cercador i la llista d'alumnes -->
+
     <div class="botons">
-        <div id="gestionarAlumnes">
-            <button>Gestionar Alumnes</button>
-        </div>
-        <div id="importarAlumnes">
-            <button>Importar o donar d'alta alumnes</button>
-        </div>
-        <div id="gestionarActes">
-            <button>Gestionar Actes i activitats</button>
-        </div>
-        <div id="consultarInvitacions">
-            <button>Consultar invitacions</button>
-        </div>
-        <div id="consultarAssistents">
-            <button>Consultar assistents</button>
-        </div>
-        <div id="gestionarPuntsControl">
-            <button>Gestionar punts de control</button>
-        </div>
-        <div id="consultarRegistresAcces">
-            <button>Consultar registres d'accés</button>
-        </div>
-        <div id="consultarEstadistiques">
-            <button>Consultar estadístiques</button>
-        </div>
-        <div id="consultarRanquing">
-            <button>Consultar el rànquing</button>
-        </div>
-        <div id="configuracio">
-            <button>Configuració</button>
-        </div>
+            <div id="gestionarAlumnes">
+                <button>Gestionar Alumnes</button>
+            </div>
+            <div id="importarAlumnes">
+                <button>Importar o donar d'alta alumnes</button>
+            </div>
+            <div id="gestionarActes">
+                <button>Gestionar Actes i activitats</button>
+            </div>
+            <div id="consultarInvitacions">
+                <button>Consultar invitacions</button>
+            </div>
+            <div id="consultarAssistents">
+                <button>Consultar assistents</button>
+            </div>
+            <div id="gestionarPuntsControl">
+                <button>Gestionar punts de control</button>
+            </div>
+            <div id="consultarRegistresAcces">
+                <button>Consultar registres d'accés</button>
+            </div>
+            <div id="consultarEstadistiques">
+                <button>Consultar estadístiques</button>
+            </div>
+            <div id="consultarRanquing">
+                <button>Consultar el rànquing</button>
+            </div>
+            <div id="configuracio">
+                <button>Configuració</button>
+            </div>
     </div>
-    <p>Menys esperes. Més moments.</p>
+    <p id="text-petit">Menys esperes. Més moments.</p>
 </body>
 </html>
