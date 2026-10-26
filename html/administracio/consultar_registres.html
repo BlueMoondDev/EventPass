@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>EventPass - Consultar registres d'accés</title>
+    <script src="/js/admin/consultar_registres.js" defer></script>
+</head>
+<body>
+    <header>
+        <button>&#8592;</button>
+        <h1>EventPass</h1>
+    </header>
+    <main>
+        <header>
+            <span>ESPAI D'ADMINISTRACIÓ</span>
+            <span>Dades de mostra</span>
+            <h2>Consultar registres d'accés</h2>
+            <p>Revisa l'historial de validacions de Matriculació.</p>
+        </header>
+
+        <form>
+            <fieldset>
+                <legend>Filtres de consulta</legend>
+                <label>Acte</label>
+                <select>
+                    <option>Jornada cultural</option>
+                </select>
+                
+                <label>Data</label>
+                <input type="date" value="2026-10-20">
+                
+                <label>Resultat</label>
+                <select>
+                    <option>Tots</option>
+                </select>
+                
+                <label>Punt de control</label>
+                <select>
+                    <option>Tots els punts</option>
+                </select>
+            </fieldset>
+        </form>
+
+        <section>
+            <header>
+                <h3>6 registres · 5 persones</h3>
+                <span>Jornada cultural - 20/10/2026</span>
+                <button>Més recents primer</button>
+            </header>
+            <ul>
+                <li>
+                    <h4>Ona Soler</h4>
+                    <span>78901234X - 10:10 - Accés auditori</span>
+                    <span>Correcta</span>
+                </li>
+                <li>
+                    <h4>Júlia Costa</h4>
+                    <span>34567890V - 10:08 - Accés auditori</span>
+                    <span>Correcta</span>
+                </li>
+                <li>
+                    <h4>Anna Vidal</h4>
+                    <span>56789012B - 10:06 - Porta principal</span>
+                    <span>Correcta</span>
+                </li>
+                <li>
+                    <h4>Anna Vidal</h4>
+                    <span>56789012B - 10:05 - Porta principal</span>
+                    <span>Incorrecta</span>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <header>
+                <h3>Detall del registre</h3>
+                <span>Seleccionat</span>
+            </header>
+            <p>Persona: <span>Anna Vidal - Convidada</span></p>
+            <p>DNI/NIE: <span>56789012B</span></p>
+            <p>Acte: <span>Jornada cultural - ID 101</span></p>
+            <p>Punt de control: <span>Porta principal</span></p>
+            <p>Data: <span>20/10/2026</span></p>
+            <p>Hora: <span>10:05</span></p>
+            <p>Validació: <span>Incorrecta</span></p>
+            
+            <p>Es mostra el resultat registrat. No es dedueix cap motiu de la validació incorrecta.</p>
+        </section>
+    </main>
+</body>
+</html>

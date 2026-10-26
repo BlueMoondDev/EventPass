@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>EventPass - Configuració</title>
+    <script src="/js/admin/configuracio.js" defer></script>
+</head>
+<body>
+    <header>
+        <button>&#8592;</button>
+        <h1>EventPass</h1>
+    </header>
+    <main>
+        <header>
+            <span>ESPAI D'ADMINISTRACIÓ</span>
+            <span>Dades de mostra</span>
+            <h2>Configuració</h2>
+            <p>Gestiona l'accés d'administració i la interfície.</p>
+        </header>
+
+        <section>
+            <h3>Compte d'administració</h3>
+            <p>Identificador d'administració</p>
+            <p>admin.centre</p>
+            <p>Contrasenya: <span>••••••••••••</span></p>
+        </section>
+
+        <section>
+            <h3>Canviar la contrasenya</h3>
+            <form>
+                <label>Contrasenya actual</label>
+                <input type="password" value="••••••••••••">
+                
+                <label>Nova contrasenya</label>
+                <input type="password" value="••••••••••••">
+                
+                <label>Confirmar la nova contrasenya</label>
+                <input type="password" value="••••••••••••">
+                
+                <p>Utilitza una clau que no facis servir en altres serveis. Les contrasenyes es mantenen ocultes.</p>
+                <button type="submit">Desar la contrasenya</button>
+            </form>
+        </section>
+
+        <section>
+            <h3>Idioma de la interfície</h3>
+            <span>Preferència d'interfície</span>
+            <form>
+                <label>Idioma</label>
+                <select>
+                    <option>Català</option>
+                </select>
+                <p>Aquesta preferència només canvia la llengua de la interfície; no és un camp del compte a la base de dades.</p>
+                <button type="submit">Desar la preferència</button>
+            </form>
+        </section>
+
+        <section>
+            <h3>Sessió</h3>
+            <p>En acabar, tanca la sessió per protegir l'accés a l'espai d'administració.</p>
+            <button type="button">Tancar sessió</button>
+        </section>
+    </main>
+</body>
+</html>

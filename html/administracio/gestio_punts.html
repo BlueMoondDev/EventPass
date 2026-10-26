@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>EventPass - Gestionar punts de control</title>
+    <script src="/js/admin/gestio_punts.js" defer></script>
+</head>
+<body>
+    <header>
+        <button>&#8592;</button>
+        <h1>EventPass</h1>
+    </header>
+    <main>
+        <header>
+            <span>ESPAI D'ADMINISTRACIÓ</span>
+            <span>Dades de mostra</span>
+            <h2>Gestionar punts de control</h2>
+            <p>Organitza els noms dels punts que consten als registres.</p>
+        </header>
+
+        <input type="search" placeholder="Cerca un acte o un punt de control">
+
+        <label>Acte per editar</label>
+        <select>
+            <option>Jornada cultural - ID 101</option>
+        </select>
+
+        <section>
+            <h3>Jornada cultural</h3>
+            <span>6 registres</span>
+            <ul>
+                <li>
+                    <span>Porta principal</span>
+                    <span>4 registres</span>
+                </li>
+                <li>
+                    <span>Accés auditori</span>
+                    <span>2 registres</span>
+                </li>
+            </ul>
+
+            <h3>Taller creatiu</h3>
+            <span>3 registres</span>
+            <ul>
+                <li>
+                    <span>Vestíbul</span>
+                    <span>3 registres</span>
+                </li>
+            </ul>
+
+            <p>Els punts són valors text (Punt de control) a Matriculació. Els registres corresponen a registres, no a dispositius ni a persones úniques.</p>
+        </section>
+
+        <section>
+            <h3>Canviar el nom del punt</h3>
+            <form>
+                <label>Acte</label>
+                <input type="text" value="Jornada cultural" readonly>
+                <label>Nom del punt seleccionat</label>
+                <input type="text" value="Porta principal">
+                <p>El canvi s'aplicarà als 4 registres d'aquest acte que tenen aquest valor.</p>
+                <button type="submit">Canviar nom</button>
+            </form>
+        </section>
+
+        <section>
+            <h3>Afegir un punt</h3>
+            <form>
+                <label>Nou valor del punt de control</label>
+                <input type="text" value="Accés lateral">
+                <label>Registre on s'assignarà</label>
+                <select>
+                    <option>Anna Vidal - 20/10/2026 - 10:05</option>
+                </select>
+                <p>S'assigna el nou nom al registre seleccionat; no es crea cap punt independent.</p>
+                <button type="submit">+ Afegir i assignar punt</button>
+            </form>
+        </section>
+
+        <section>
+            <h3>Eliminar el punt seleccionat</h3>
+            <form>
+                <p>Per retirar "Porta principal", reassigna els seus 4 registres a un altre punt del mateix acte.</p>
+                <label>Punt de substitució</label>
+                <select>
+                    <option>Accés auditori</option>
+                </select>
+                <p>S'eliminarà aquest nom de l'acte, però es conservaran tots els registres d'accés.</p>
+                <button type="button">Eliminar el punt</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>EventPass - Consultar assistents</title>
+    <script src="/js/admin/consultar_assistents.js" defer></script>
+</head>
+<body>
+    <header>
+        <button>&#8592;</button>
+        <h1>EventPass</h1>
+    </header>
+    <main>
+        <header>
+            <span>ESPAI D'ADMINISTRACIÓ</span>
+            <span>Dades de mostra</span>
+            <h2>Consultar assistents</h2>
+            <p>Consulta les persones associades a cada acte.</p>
+        </header>
+
+        <label>Acte</label>
+        <select>
+            <option>Jornada cultural - 20/10/2026</option>
+        </select>
+
+        <nav>
+            <button>Tothom</button>
+            <button>Alumnes</button>
+            <button>Convidats</button>
+        </nav>
+
+        <div>
+            <article>
+                <strong>5</strong>
+                <span>persones úniques</span>
+            </article>
+            <article>
+                <strong>6</strong>
+                <span>registres de validació</span>
+            </article>
+        </div>
+
+        <section>
+            <header>
+                <h3>Assistents</h3>
+                <span>3 alumnes - 2 convidats</span>
+            </header>
+            <p>Es mostra l'última validació registrada de cada persona.</p>
+            <ul>
+                <li>
+                    <h4>Laia Vidal</h4>
+                    <span>12345678Z - Alumna</span>
+                    <span>Correcta</span>
+                    <span>10:02</span>
+                </li>
+                <li>
+                    <h4>Marc Soler</h4>
+                    <span>23456789D - Alumne</span>
+                    <span>Correcta</span>
+                    <span>10:04</span>
+                </li>
+                <li>
+                    <h4>Anna Vidal</h4>
+                    <span>56789012B - Convidada</span>
+                    <span>Correcta</span>
+                    <span>10:06</span>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <header>
+                <h3>Detall de l'assistent</h3>
+                <span>Convidada</span>
+            </header>
+            <p>Nom i cognom: <span>Anna Vidal</span></p>
+            <p>DNI/NIE: <span>56789012B</span></p>
+            <p>Correu: <span>anna.vidal@example.cat</span></p>
+            <p>Acte: <span>Jornada cultural - ID 101</span></p>
+            
+            <h4>Registre de validació</h4>
+            <span>20/10/2026</span>
+            <ul>
+                <li>
+                    <strong>10:06</strong>
+                    <span>Porta principal</span>
+                    <span>Correcta</span>
+                </li>
+                <li>
+                    <strong>10:05</strong>
+                    <span>Porta principal</span>
+                    <span>Incorrecta</span>
+                </li>
+            </ul>
+            <p>Dades de Matriculació: 2 registres corresponen a una sola persona.</p>
+        </section>
+    </main>
+</body>
+</html>
