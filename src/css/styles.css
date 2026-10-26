@@ -53,7 +53,7 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-top: 20px;
     text-align: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(217, 217, 217);
     padding-bottom: 8px;
     margin-bottom: 16px;
 
@@ -89,6 +89,10 @@ body {
 /* Tablet */
 @media (max-width: 1024px) {
     .botons {
+        display: flex;
+        gap: 5px;
+        padding: 15px 20px;
+        text-align: center;
         grid-template-columns: 2, 1fr;
         grid-template-areas:
             "gest-alumnes import-alumnes"
@@ -98,21 +102,20 @@ body {
             "cons-ranquing config";
     }
 }
-
+/* MOVIL*/
 @media (max-width: 600px) {
     .botons {
+        display: grid;
+        gap: 10px;
+        padding: 15px 20px;
+        text-align: center;
         grid-template-columns: 1fr;
         grid-template-areas:
-            "gest-alumnes"
-            "import-alumnes"
-            "gest-actes"
-            "cons-invitacions"
-            "cons-asists"
-            "gest-pdc"
-            "cons-regAc"
-            "cons-stats"
-            "cons-ranquing"
-            "config";
+            "gest-alumnes import-alumnes"
+            "gest-actes cons-invitacions"
+            "cons-asists gest-pdc"
+            "cons-regAc cons-stats"
+            "cons-ranquing config";
     }
 }
 
@@ -125,7 +128,6 @@ body {
             "cons-asists gest-pdc cons-regAc cons-stats"
             ". cons-ranquing config .";
     }
-
     #gestionarAlumnes {
         grid-area: gest-alumnes;
     }
