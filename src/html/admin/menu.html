@@ -1,50 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EventsPass - Pagina d'Administració</title>
-    <link rel="stylesheet" href="../../src/css/styles.css">
+    <title>EventPass - Pàgina d'Administració</title>
+    <link rel="stylesheet" href="../../css/styles.css">
 </head>
-<header>   
-    <h1 id="titol">EVENT PASS</h1>
-    <p id="subtitol-titol">Espai d'administració</p>
-    <h2 id="titolpetit">Gestió</h2>
-    <p id="text-petit-titol">Totes les eines per organitzar els teus actes.</p>
-</header>
 <body>
-    <div class="botons">
+    <header>
+        <h1 id="titol" class="Webtitle">EVENT PASS</h1>
+    </header>
+    <main>
+        <header>
+            <span id="subtitol-titol" class="permisionspacetext">Espai d'administració</span>
+            <h2 id="titolpetit" class="nom_apartat">Gestió</h2>
+            <p id="text-petit-titol" class="desc_apartat">Totes les eines per organitzar els teus actes.</p>
+        </header>
+        <div class="botons">
             <div id="gestionarAlumnes">
-                <a href="gestionar_alumnes.html"><button>Gestionar Alumnes</button></a>
+                <a href="gestionar_alumnes.html"><button type="button" class="boto_general">Gestionar Alumnes</button></a>
             </div>
-            <div id="importarAlumnes" href="">
-                <a href="import_alumnes.html"><button>Importar o donar d'alta alumnes</button></a>
+            <div id="importarAlumnes">
+                <a href="import_alumnes.html"><button type="button" class="boto_general">Importar o donar d'alta alumnes</button></a>
             </div>
             <div id="gestionarActes">
-                <a href="gestionar_actes.html"><button>Gestionar Actes i activitats</button></a>
+                <a href="gestionar_actes.html"><button type="button" class="boto_general">Gestionar Actes i activitats</button></a>
             </div>
             <div id="consultarInvitacions">
-                <a href="consultar_invitacions.html"><button>Consultar invitacions</button></a>
+                <a href="consultar_invitacions.html"><button type="button" class="boto_general">Consultar invitacions</button></a>
             </div>
             <div id="consultarAssistents">
-                <a href="consultar_assistents.html"><button>Consultar assistents</button></a>
+                <a href="consultar_assistents.html"><button type="button" class="boto_general">Consultar assistents</button></a>
             </div>
             <div id="gestionarPuntsControl">
-                <a href="gestio_punts.html"><button>Gestionar punts de control</button></a>
+                <a href="gestio_punts.html"><button type="button" class="boto_general">Gestionar punts de control</button></a>
             </div>
             <div id="consultarRegistresAcces">
-                <a href="consultar_registres.html"><button>Consultar registres d'accés</button></a>
+                <a href="consultar_registres.html"><button type="button" class="boto_general">Consultar registres d'accés</button></a>
             </div>
             <div id="consultarEstadistiques">
-                <a href="consultar_estadistiques.html"><button>Consultar estadístiques</button></a>
+                <a href="consultar_estadistiques.html"><button type="button" class="boto_general">Consultar estadístiques</button></a>
             </div>
             <div id="consultarRanquing">
-                <a href="consultar_ranquing.html"><button>Consultar el rànquing</button></a>
+                <a href="consultar_ranquing.html"><button type="button" class="boto_general">Consultar el rànquing</button></a>
             </div>
             <div id="configuracio">
-                <a href="configuracio.html"><button>Configuració</button></a>
+                <a href="configuracio.html"><button type="button" class="boto_general">Configuració</button></a>
             </div>
-    </div>
-    <p id="text-petit">Menys esperes. Més moments.</p>
+        </div>
+    </main>
+    <p id="text-petit" class="frase_estrella">Menys esperes. Més moments.</p>
 </body>
 </html>
