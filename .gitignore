@@ -1,0 +1,5 @@
+# Ignorar configuraciones locales de Visual Studio Code
+.vscode/
+
+# Ignorar carpetas de caché temporales
+.cache/
